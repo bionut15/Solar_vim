@@ -45,7 +45,11 @@ local plugins = {
 		}
     	},
 	{'windwp/nvim-autopairs',
-    	event = "InsertEnter",
+    	event = "InsertEnter", },
+	{
+    	'goolord/alpha-nvim',
+    	event = "VimEnter",
+    	dependencies = { 'nvim-tree/nvim-web-devicons' },
 	},
 }
 local opt = {}
