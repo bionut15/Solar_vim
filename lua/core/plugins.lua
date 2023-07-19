@@ -47,10 +47,14 @@ local plugins = {
 	{'windwp/nvim-autopairs',
     	event = "InsertEnter", },
 	{
-    	'goolord/alpha-nvim',
-    	event = "VimEnter",
-    	dependencies = { 'nvim-tree/nvim-web-devicons' },
-	},
+  		'glepnir/dashboard-nvim',
+  		event = 'VimEnter',
+  		config = function()
+    		require('dashboard').setup {
+		}end,
+  		dependencies = { {'nvim-tree/nvim-web-devicons'}}
+	}
 }
-local opt = {}
+local opt = {
+}
 require("lazy").setup(plugins, opts)

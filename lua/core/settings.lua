@@ -23,4 +23,4 @@ command('set showmatch')
 command('set nohlsearch')
 
 -- Make tabs visible
-vim.api.nvim_command('set listchars=tab:¦ ')
+command('set listchars=tab:¦ ')
