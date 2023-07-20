@@ -1,14 +1,16 @@
 --making a simple alias
 local command = vim.api.nvim_command
-
+	
 --Cursor line
 command('set cursorline')
 command('set cursorcolumn')
+command('set noshowmode')
+command('set laststatus=0')
 
 --Tabs settings to work normally
 command('set tabstop=6')
 command('set shiftwidth=6')
-command('set softtabstop')
+--command('set softtabstop')
 
 --Number line 
 command('set relativenumber')

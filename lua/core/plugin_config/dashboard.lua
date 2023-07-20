@@ -1,30 +1,48 @@
 local db = require('dashboard')
 
-db.setup({
-  theme = 'doom',
-  config = {
-    header = {
-
-    }, --your header
-    center = {
-      {
-        icon = ' ',
-        icon_hl = 'Title',
-        desc = 'Find File           ',
-        desc_hl = 'String',
-        key = 'b',
-        keymap = 'SPC f f',
-        key_hl = 'Number',
-        action = 'lua print(2)'
+  db.setup({
+    theme = 'hyper',
+    config = {
+	header ={
+[[]],
+[[░██████╗░█████╗░██╗░░░░░░█████╗░██████╗░  ███╗░░██╗██╗░░░██╗██╗███╗░░░███╗]],
+[[██╔════╝██╔══██╗██║░░░░░██╔══██╗██╔══██╗  ████╗░██║██║░░░██║██║████╗░████║]],
+[[╚█████╗░██║░░██║██║░░░░░███████║██████╔╝  ██╔██╗██║╚██╗░██╔╝██║██╔████╔██║]],
+[[░╚═══██╗██║░░██║██║░░░░░██╔══██║██╔══██╗  ██║╚████║░╚████╔╝░██║██║╚██╔╝██║]],
+[[██████╔╝╚█████╔╝███████╗██║░░██║██║░░██║  ██║░╚███║░░╚██╔╝░░██║██║░╚═╝░██║]],
+[[╚═════╝░░╚════╝░╚══════╝╚═╝░░╚═╝╚═╝░░╚═╝  ╚═╝░░╚══╝░░░╚═╝░░░╚═╝╚═╝░░░░░╚═╝]],
+[[]],
+[[PRO Tip: To exit Neovim unplug ur computer(alias for :q!)]],
+[[]],
+	},
+      week_header = {
+       enable = false,
       },
-      {
-        icon = ' ',
-        desc = 'Find Dotfiles',
-        key = 'f',
-        keymap = 'SPC f d',
-        action = 'lua print(3)'
+      shortcut = {
+        { desc = '󰊳 Update', group = '@property', action = 'Lazy update', key = 'u' },
+        {
+          icon = ' ',
+          icon_hl = '@variable',
+          desc = 'Files',
+          group = 'Label',
+          action = 'Telescope find_files',
+          key = 'f',
+        },
+        {
+          desc = ' LazyGit',
+          group = 'DiagnosticHint',
+          action = 'Telescope app',
+          key = 'l',
+        },
+        {
+          desc = ' dotfiles',
+          group = 'Number',
+          action = 'Telescope dotfiles',
+          key = 'd',
+        },
       },
+	packages = { enable = false},
+	footer = {},
     },
-    footer = {}  --your footer
-  }
-})
+  })
+
