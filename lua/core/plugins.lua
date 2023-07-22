@@ -18,9 +18,11 @@ local plugins = {
 	{'nvim-lualine/lualine.nvim',
 	dependencies = {'nvim-tree/nvim-web-devicons',},
 	},
+	'junegunn/fzf',
 	{"nvim-tree/nvim-tree.lua",
 	dependencies = {"nvim-tree/nvim-web-devicons",},
 	},
+	'nvim-treesitter/nvim-treesitter',
 	--Nvim CMP 
 	'hrsh7th/cmp-nvim-lsp',
 	'hrsh7th/cmp-buffer',

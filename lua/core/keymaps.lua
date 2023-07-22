@@ -2,6 +2,7 @@
 local keymap = vim.keymap.set
 
 vim.g.mapleader = " "
+
 --Nvim Tree
 keymap('n', '<leader>e',":NvimTreeToggle<cr>", opts)
 keymap('n', '<leader>',":NvimTreeToggle<cr>", opts)
@@ -17,3 +18,5 @@ keymap("n", "<Left>", ":vertical resize +1<CR>", default_opts)
 keymap("n", "<Right>", ":vertical resize -1<CR>", default_opts)
 keymap("n", "<Up>", ":resize -1<CR>", opt)
 keymap("n", "<Down>", ":resize +1<CR>", opt)
+--Fuzy finder 
+keymap("n","<leader>/",":FZF<cr>", opts)

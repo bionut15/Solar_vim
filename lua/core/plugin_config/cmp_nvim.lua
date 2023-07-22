@@ -1,6 +1,14 @@
 vim.g.completeopt = "menu, menuone, noselect, noinsert" 
 local cmp = require'cmp'
 
+-- If you want insert `(` after select function or method item
+local cmp_autopairs = require('nvim-autopairs.completion.cmp')
+local cmp = require('cmp')
+cmp.event:on(
+  'confirm_done',
+  cmp_autopairs.on_confirm_done()
+)
+
 require("luasnip.loaders.from_vscode").lazy_load() 
 
   cmp.setup({
@@ -63,3 +71,4 @@ require("luasnip.loaders.from_vscode").lazy_load()
 --  require'lspconfig'.html.setup {
 --   capabilities = capabilities
 -- }
+
