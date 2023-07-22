@@ -20,3 +20,14 @@ keymap("n", "<Up>", ":resize -1<CR>", opt)
 keymap("n", "<Down>", ":resize +1<CR>", opt)
 --Fuzy finder 
 keymap("n","<leader>/",":FZF<cr>", opts)
+
+keymap("v", "K", ":m '<-2<CR>gv=gv")
+keymap("v", "J", ":m '>+1<CR>gv=gv")
+keymap("n", "J", "mzJ`z")
+--good
+keymap("n", "n", "nzzzv")
+keymap("n", "N", "Nzzzv")
+--Making and executable
+keymap("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true })
+
+

@@ -14,15 +14,23 @@ end
 vim.opt.rtp:prepend(lazypath)
 -- Here comes the plugins
 local plugins = {
+	--Theme
 	{"ellisonleao/gruvbox.nvim", priority = 1000},
+	--Statusline
 	{'nvim-lualine/lualine.nvim',
 	dependencies = {'nvim-tree/nvim-web-devicons',},
 	},
+	--File explorer and fzf
+	{'akinsho/bufferline.nvim', version = "*", dependencies = 'nvim-tree/nvim-web-devicons'},
 	'junegunn/fzf',
 	{"nvim-tree/nvim-tree.lua",
 	dependencies = {"nvim-tree/nvim-web-devicons",},
 	},
 	'nvim-treesitter/nvim-treesitter',
+	--Preetier
+	'neovim/nvim-lspconfig',
+	'jose-elias-alvarez/null-ls.nvim',
+	'MunifTanjim/prettier.nvim',
 	--Nvim CMP 
 	'hrsh7th/cmp-nvim-lsp',
 	'hrsh7th/cmp-buffer',
@@ -38,9 +46,9 @@ local plugins = {
 	'rafamadriz/friendly-snippets',
 	{
 	"L3MON4D3/LuaSnip",
-	-- follow latest release.
 	version = "2.*",  
 	build = "make install_jsregexp"},
+	--Autopairs
 	{'windwp/nvim-autopairs',
     	event = "InsertEnter", },
 	{
