@@ -37,6 +37,8 @@ local plugins = {
 	'hrsh7th/cmp-path',
 	'hrsh7th/cmp-cmdline',
 	'hrsh7th/nvim-cmp',
+	--LazyGit
+	'kdheepak/lazygit.nvim',
 	--LSP
 	'williamboman/mason-lspconfig.nvim',
 	'williamboman/mason.nvim',
