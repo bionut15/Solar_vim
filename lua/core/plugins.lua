@@ -1,5 +1,3 @@
---plugin manager with lazy
-
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then
   vim.fn.system({
@@ -16,6 +14,9 @@ vim.opt.rtp:prepend(lazypath)
 local plugins = {
 	--Theme
 	{"ellisonleao/gruvbox.nvim", priority = 1000},
+	{"catppuccin/nvim", name = "catppuccin", priority = 1000},
+	{'https://gitlab.com/yorickpeterse/vim-paper.git'},
+	{ "EdenEast/nightfox.nvim" },
 	--Statusline
 	{'nvim-lualine/lualine.nvim',
 	dependencies = {'nvim-tree/nvim-web-devicons',},
@@ -60,7 +61,7 @@ local plugins = {
     		require('dashboard').setup {
 		}end,
   		dependencies = { {'nvim-tree/nvim-web-devicons'}}
-	}
+	},
 }
 local opt = {
 }
