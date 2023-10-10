@@ -44,6 +44,8 @@ local plugins = {
 	'williamboman/mason-lspconfig.nvim',
 	'williamboman/mason.nvim',
 	'neovim/nvim-lspconfig',
+	--Latex plugin
+	'lervag/vimtex',	
 	--Snippit plugin
 	'saadparwaiz1/cmp_luasnip',
 	'rafamadriz/friendly-snippets',
