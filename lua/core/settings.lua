@@ -36,8 +36,7 @@ exec "!gcc % -o %<"
 exec "!time ./%<"
 elseif &filetype == 'cpp'
 exec "!make test"
-elseif &filetype == 'tex'
-exec "!pdftex %"
+exec "!time ./%<"
 elseif &filetype == 'java'
 exec "!javac %"
 exec "!time java -cp %:p:h %:t:r"
