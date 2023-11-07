@@ -1,3 +1,3 @@
-vim.cmd.colorscheme "dayfox"
-
-vim.o.background = "light"
+vim.cmd.colorscheme "gruvbox"
+vim.cmd('TransparentEnable')
+vim.o.background = "dark"

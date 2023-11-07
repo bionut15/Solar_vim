@@ -4,7 +4,7 @@ local keymap = vim.keymap.set
 vim.g.mapleader = " "
 
 --preferance
-keymap('n', '<leader>w', ":w", opts)
+keymap('n', '<leader>w', ":w<cr>", opts)
 --Nvim Tree
 keymap('n', '<leader>e',":NvimTreeToggle<cr>", opts)
 keymap('n', '<leader>',":NvimTreeToggle<cr>", opts)

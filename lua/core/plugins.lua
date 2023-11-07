@@ -13,6 +13,7 @@ vim.opt.rtp:prepend(lazypath)
 -- Here comes the plugins
 local plugins = {
 	--Theme
+	{'xiyaowong/transparent.nvim'},
 	{"ellisonleao/gruvbox.nvim", priority = 1000},
 	{"catppuccin/nvim", name = "catppuccin", priority = 1000},
 	{'https://gitlab.com/yorickpeterse/vim-paper.git'},
