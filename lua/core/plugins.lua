@@ -63,6 +63,7 @@ local plugins = {
 		}end,
   		dependencies = { {'nvim-tree/nvim-web-devicons'}}
 	},
+	'lervag/vimtex',
 }
 local opt = {
 }

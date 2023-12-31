@@ -5,9 +5,10 @@ vim.g.mapleader = " "
 
 --preferance
 keymap('n', '<leader>w', ":w<cr>", opts)
+--god know how much i miss this
+keymap('n', '<S-Tab>', ":bnext<cr>",opts )
 --Nvim Tree
 keymap('n', '<leader>e',":NvimTreeToggle<cr>", opts)
-keymap('n', '<leader>',":NvimTreeToggle<cr>", opts)
 --Split
 keymap('n', '<C-W>h', '<C-W>s', opts)
 --navigation and better switching bettween windows
