@@ -8,8 +8,8 @@ command('set noshowmode')
 command('set laststatus=0')
 
 --Tabs settings to work normally
-command('set tabstop=8')
-command('set shiftwidth=8')
+command('set tabstop=6')
+command('set shiftwidth=6')
 --command('set softtabstop')
 
 --Number line 
@@ -26,6 +26,10 @@ command('set nohlsearch')
 
 -- Make tabs visible
 command('set listchars=tab:¦ ')
+vim.cmd [[set list
+		set cursorline
+		set cursorcolumn
+]]
 
 vim.cmd [[
 map <F5> :call CompileRunGcc()<CR>
