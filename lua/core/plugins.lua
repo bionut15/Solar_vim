@@ -1,4 +1,5 @@
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
+
 if not vim.loop.fs_stat(lazypath) then
   vim.fn.system({
     "git",
@@ -50,8 +51,11 @@ local plugins = {
 	'rafamadriz/friendly-snippets',
 	{
 	"L3MON4D3/LuaSnip",
-	version = "2.*",  
-	build = "make install_jsregexp"},
+	-- follow latest release.
+	version = "v2.*", -- Replace <CurrentMajor> by the latest released major (first number of latest release)
+	-- install jsregexp (optional!).
+	build = "make install_jsregexp"
+	},
 	--Autopairs
 	{'windwp/nvim-autopairs',
     	event = "InsertEnter", },

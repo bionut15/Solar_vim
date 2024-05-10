@@ -1,6 +1,6 @@
 --making a simple alias
 local command = vim.api.nvim_command
-	
+
 --Cursor line
 command('set cursorline')
 command('set cursorcolumn')
@@ -40,8 +40,12 @@ exec "!time ./%<"
 elseif &filetype == 'java'
 exec "!javac %"
 exec "!time java -cp %:p:h %:t:r"
+elseif &filetype == 'rs'
+exec "!cargo r"
 elseif &filetype == 'sh'
 exec "!time bash %"
+elseif &filetype == 'lua'
+exec "!love ."
 elseif &filetype == 'python'
 exec "!time python3  %"
 elseif &filetype == 'html'
