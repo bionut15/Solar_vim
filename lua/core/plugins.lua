@@ -15,6 +15,9 @@ vim.opt.rtp:prepend(lazypath)
 local plugins = {
 	--Theme
 	{'xiyaowong/transparent.nvim'},
+	{'sainnhe/everforest',
+      lazy = false,
+      priority = 1000,},
 	{"ellisonleao/gruvbox.nvim", priority = 1000},
 	{"catppuccin/nvim", name = "catppuccin", priority = 1000},
 	{'https://gitlab.com/yorickpeterse/vim-paper.git'},
@@ -34,7 +37,7 @@ local plugins = {
 	'neovim/nvim-lspconfig',
 	'jose-elias-alvarez/null-ls.nvim',
 	'MunifTanjim/prettier.nvim',
-	--Nvim CMP 
+	--Nvim CMP
 	'hrsh7th/cmp-nvim-lsp',
 	'hrsh7th/cmp-buffer',
 	'hrsh7th/cmp-path',
@@ -46,6 +49,7 @@ local plugins = {
 	'williamboman/mason-lspconfig.nvim',
 	'williamboman/mason.nvim',
 	'neovim/nvim-lspconfig',
+	'nvim-lua/plenary.nvim',
 	--Snippit plugin
 	'saadparwaiz1/cmp_luasnip',
 	'rafamadriz/friendly-snippets',

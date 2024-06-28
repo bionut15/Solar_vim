@@ -10,7 +10,7 @@ command('set laststatus=0')
 --Tabs settings to work normally
 command('set tabstop=6')
 command('set shiftwidth=6')
---command('set softtabstop')
+command('set softtabstop')
 
 --Number line 
 command('set relativenumber')
@@ -18,15 +18,23 @@ command('set number')
 
 -- Enable sane clipboard usage
 command('set clipboard+=unnamedplus')
-command('set listchars=tab:¦ ')
-
+vim.opt.listchars = {
+  eol = ' ',
+  space = ' ',
+  trail = ' ',
+  extends = '▶',
+  precedes = '◀',
+}
+vim.opt.list = true
+		
 -- Show matches when seacrhing
 command('set showmatch')
 command('set nohlsearch')
 
 -- Make tabs visible
-command('set listchars=tab:¦ ')
-vim.cmd [[set list
+vim.cmd [[	set list lcs=tab:\┃ 
+		set encoding=utf-8
+		set list
 		set cursorline
 		set cursorcolumn
 ]]
