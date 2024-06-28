@@ -1,7 +1,7 @@
 # Solar Vim
+
 Here is all the stuff that i use in nvim
 
+Fully fleged IDE for rust, nix and lua config
 
-well still in working 
-
-mostly stolen from astro-vim
+# W.I.P.

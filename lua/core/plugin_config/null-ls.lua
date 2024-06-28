@@ -13,6 +13,7 @@ null_ls.setup({
 		null_ls.builtins.diagnostics.shellcheck,
 		null_ls.builtins.formatting.rustfmt,
 		null_ls.builtins.formatting.alejandra,
+		null_ls.builtins.formatting.prettier,
 	},
 	on_attach = function(client, bufnr)
 		if client.supports_method("textDocument/formatting") then
