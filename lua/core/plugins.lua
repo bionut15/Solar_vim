@@ -15,15 +15,27 @@ vim.opt.rtp:prepend(lazypath)
 local plugins = {
 	--Theme
 	{ "xiyaowong/transparent.nvim" },
-	{ "sainnhe/everforest", lazy = false, priority = 1000 },
+	{
+		"sainnhe/everforest",
+		lazy = false,
+		priority = 1000,
+	},
 	{ "ellisonleao/gruvbox.nvim", priority = 1000 },
-	{ "catppuccin/nvim", name = "catppuccin", priority = 1000 },
+	{
+		"catppuccin/nvim",
+		name = "catppuccin",
+		priority = 1000,
+	},
 	{ "https://gitlab.com/yorickpeterse/vim-paper.git" },
 	{ "EdenEast/nightfox.nvim" },
 	--Statusline
 	{ "nvim-lualine/lualine.nvim", dependencies = { "nvim-tree/nvim-web-devicons" } },
 	--File explorer and fzf
-	{ "akinsho/bufferline.nvim", version = "*", dependencies = "nvim-tree/nvim-web-devicons" },
+	{
+		"akinsho/bufferline.nvim",
+		version = "*",
+		dependencies = "nvim-tree/nvim-web-devicons",
+	},
 	"junegunn/fzf",
 	{ "nvim-tree/nvim-tree.lua", dependencies = { "nvim-tree/nvim-web-devicons" } },
 	"nvim-treesitter/nvim-treesitter",
@@ -31,6 +43,8 @@ local plugins = {
 	"neovim/nvim-lspconfig",
 	"jose-elias-alvarez/null-ls.nvim",
 	"MunifTanjim/prettier.nvim",
+	--Which key
+	"folke/which-key.nvim",
 	--Nvim CMP
 	"hrsh7th/cmp-nvim-lsp",
 	"hrsh7th/cmp-buffer",
@@ -66,5 +80,6 @@ local plugins = {
 	},
 	"lervag/vimtex",
 }
+
 local opt = {}
 require("lazy").setup(plugins, opts)
