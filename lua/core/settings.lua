@@ -6,6 +6,7 @@ command("set cursorline")
 command("set cursorcolumn")
 command("set noshowmode")
 command("set laststatus=0")
+command("set scrolloff=8")
 
 --Tabs settings to work normally
 command("set tabstop=6")
