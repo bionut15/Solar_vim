@@ -1,6 +1,5 @@
 --keymappings
 local keymap = vim.keymap.set
-
 vim.g.mapleader = " "
 
 --preferance
@@ -21,9 +20,10 @@ keymap("n", "<Left>", ":vertical resize +1<CR>", default_opts)
 keymap("n", "<Right>", ":vertical resize -1<CR>", default_opts)
 keymap("n", "<Up>", ":resize -1<CR>", opt)
 keymap("n", "<Down>", ":resize +1<CR>", opt)
---Fuzy finder
-keymap("n", "<leader>/", ":FZF<cr>", opts)
+--telescope
+keymap("n", "<leader>t", ":Telescope find_files <CR>")
 
+--moving lines
 keymap("v", "K", ":m '<-2<CR>gv=gv")
 keymap("v", "J", ":m '>+1<CR>gv=gv")
 keymap("n", "J", "mzJ`z")

@@ -30,13 +30,20 @@ local plugins = {
 	{ "EdenEast/nightfox.nvim" },
 	--Statusline
 	{ "nvim-lualine/lualine.nvim", dependencies = { "nvim-tree/nvim-web-devicons" } },
-	--File explorer and fzf
+	--File explorer
 	{
 		"akinsho/bufferline.nvim",
 		version = "*",
 		dependencies = "nvim-tree/nvim-web-devicons",
 	},
-	"junegunn/fzf",
+	--telescope
+	{
+		"nvim-telescope/telescope.nvim",
+		tag = "0.1.8",
+		-- or                              , branch = '0.1.x',
+		dependencies = { "nvim-lua/plenary.nvim" },
+	},
+	"zane-/cder.nvim",
 	{ "nvim-tree/nvim-tree.lua", dependencies = { "nvim-tree/nvim-web-devicons" } },
 	"nvim-treesitter/nvim-treesitter",
 	--Preetier
@@ -58,8 +65,10 @@ local plugins = {
 	"williamboman/mason.nvim",
 	"neovim/nvim-lspconfig",
 	"nvim-lua/plenary.nvim",
+
 	--Snippit plugin
 	"saadparwaiz1/cmp_luasnip",
+	"onsails/lspkind-nvim",
 	"rafamadriz/friendly-snippets",
 	{
 		"L3MON4D3/LuaSnip",
@@ -78,6 +87,26 @@ local plugins = {
 		end,
 		dependencies = { { "nvim-tree/nvim-web-devicons" } },
 	},
+	--Tmux
+	{
+		"christoomey/vim-tmux-navigator",
+		cmd = {
+			"TmuxNavigateLeft",
+			"TmuxNavigateDown",
+			"TmuxNavigateUp",
+			"TmuxNavigateRight",
+			"TmuxNavigatePrevious",
+		},
+		keys = {
+			{ "<c-h>", "<cmd><C-U>TmuxNavigateLeft<cr>" },
+			{ "<c-j>", "<cmd><C-U>TmuxNavigateDown<cr>" },
+			{ "<c-k>", "<cmd><C-U>TmuxNavigateUp<cr>" },
+			{ "<c-l>", "<cmd><C-U>TmuxNavigateRight<cr>" },
+			{ "<c-\\>", "<cmd><C-U>TmuxNavigatePrevious<cr>" },
+		},
+	},
+	--{ "alexghergh/nvim-tmux-navigation" },
+	--latex
 	"lervag/vimtex",
 }
 

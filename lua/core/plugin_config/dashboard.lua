@@ -24,7 +24,7 @@ db.setup({
 				icon_hl = "@variable",
 				desc = " FuzzyFinder",
 				group = "Label",
-				action = "FZF",
+				action = "Telescope find_files",
 				key = "f",
 			},
 			{
