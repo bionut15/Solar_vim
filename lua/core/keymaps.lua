@@ -22,7 +22,8 @@ keymap("n", "<Up>", ":resize -1<CR>", opt)
 keymap("n", "<Down>", ":resize +1<CR>", opt)
 --telescope
 keymap("n", "<leader>t", ":Telescope find_files <CR>")
-
+--Lazy git
+keymap("n", "<leader>g", ":LazyGit <CR>")
 --moving lines
 keymap("v", "K", ":m '<-2<CR>gv=gv")
 keymap("v", "J", ":m '>+1<CR>gv=gv")

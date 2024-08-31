@@ -4,14 +4,16 @@ local command = vim.api.nvim_command
 --Cursor line
 command("set cursorline")
 command("set cursorcolumn")
-command("set noshowmode")
 command("set laststatus=0")
 command("set scrolloff=8")
 
 --Tabs settings to work normally
 command("set tabstop=6")
 command("set shiftwidth=6")
-command("set softtabstop")
+
+--Command line
+vim.opt.showmode = false
+command("set cmdheight=0")
 
 --Number line
 command("set relativenumber")
