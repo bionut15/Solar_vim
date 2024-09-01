@@ -14,6 +14,13 @@ local capabilities = require("cmp_nvim_lsp").default_capabilities()
 require("lspconfig").lua_ls.setup({
 	on_attach = on_attach,
 	capabilities = capabilities,
+	settings = {
+		Lua = {
+			diagnostics = {
+				globals = { "vim" },
+			},
+		},
+	},
 })
 require("lspconfig").rust_analyzer.setup({
 	on_attach = on_attach,
@@ -22,6 +29,9 @@ require("lspconfig").rust_analyzer.setup({
 	settings = {
 		["rust_analyzer"] = {
 			cargo = { allFeatures = true },
+			diagnostics = {
+				enable = false,
+			},
 		},
 	},
 })

@@ -16,11 +16,12 @@ local plugins = {
 	--Theme
 	{ "xiyaowong/transparent.nvim" },
 	{
-		"sainnhe/everforest",
+		"neanias/everforest-nvim",
+		version = false,
 		lazy = false,
 		priority = 1000,
 	},
-	{ "ellisonleao/gruvbox.nvim", priority = 1000 },
+	{ "ellisonleao/gruvbox.nvim",  priority = 1000 },
 	{
 		"catppuccin/nvim",
 		name = "catppuccin",
@@ -29,7 +30,7 @@ local plugins = {
 	{ "https://gitlab.com/yorickpeterse/vim-paper.git" },
 	{ "EdenEast/nightfox.nvim" },
 	--Statusline
-	{ "nvim-lualine/lualine.nvim", dependencies = { "nvim-tree/nvim-web-devicons" } },
+	{ "nvim-lualine/lualine.nvim",                     dependencies = { "nvim-tree/nvim-web-devicons" } },
 	--File explorer
 	{
 		"akinsho/bufferline.nvim",
@@ -78,7 +79,7 @@ local plugins = {
 		build = "make install_jsregexp",
 	},
 	--Autopairs
-	{ "windwp/nvim-autopairs", event = "InsertEnter" },
+	{ "windwp/nvim-autopairs",   event = "InsertEnter" },
 	{
 		"glepnir/dashboard-nvim",
 		event = "VimEnter",
@@ -98,10 +99,10 @@ local plugins = {
 			"TmuxNavigatePrevious",
 		},
 		keys = {
-			{ "<c-h>", "<cmd><C-U>TmuxNavigateLeft<cr>" },
-			{ "<c-j>", "<cmd><C-U>TmuxNavigateDown<cr>" },
-			{ "<c-k>", "<cmd><C-U>TmuxNavigateUp<cr>" },
-			{ "<c-l>", "<cmd><C-U>TmuxNavigateRight<cr>" },
+			{ "<c-h>",  "<cmd><C-U>TmuxNavigateLeft<cr>" },
+			{ "<c-j>",  "<cmd><C-U>TmuxNavigateDown<cr>" },
+			{ "<c-k>",  "<cmd><C-U>TmuxNavigateUp<cr>" },
+			{ "<c-l>",  "<cmd><C-U>TmuxNavigateRight<cr>" },
 			{ "<c-\\>", "<cmd><C-U>TmuxNavigatePrevious<cr>" },
 		},
 	},
