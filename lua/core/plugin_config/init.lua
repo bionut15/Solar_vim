@@ -1,14 +1,15 @@
 --here u require all the plugins
 
+require("core/plugin_config/live-server")
 require("core/plugin_config/colorscheme")
 require("core/plugin_config/lualine")
 require("core/plugin_config/luasnip")
-require("core/plugin_config/transparent")
 require("core/plugin_config/neotree")
 require("core/plugin_config/dashboard")
 require("core/plugin_config/lsp")
 require("core/plugin_config/cmp_nvim")
 require("core/plugin_config/autopairs")
+require("core/plugin_config/transparent")
 require("core/plugin_config/telescope")
 require("core/plugin_config/null-ls")
 require("core/plugin_config/prettier")

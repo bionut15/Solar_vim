@@ -6,7 +6,6 @@ vim.g.loaded_netrwPlugin = 1
 -- OR setup with some options
 require("nvim-tree").setup({
 	sort_by = "case_sensitive",
-	create_in_closed_folder = true,
 	hijack_cursor = true,
 	focus_empty_on_setup = true,
 	sync_root_with_cwd = true,

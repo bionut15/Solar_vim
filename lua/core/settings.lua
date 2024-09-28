@@ -64,7 +64,7 @@ exec "!love ."
 elseif &filetype == 'python'
 exec "!time python3  %"
 elseif &filetype == 'html'
-exec "!firefox % &"
+exec "LiveServerStart"
 elseif &filetype == 'go'
 exec "!go build %<"
 exec "!time go run %"
