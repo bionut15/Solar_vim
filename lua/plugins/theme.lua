@@ -1,30 +1,8 @@
--- return {
---   "neanias/everforest-nvim",
---   version = false,
---   lazy = false,
---   priority = 1000,
---   config = function()
---     require("everforest").setup({
---       background = "hard",
---       transparent_background_level = 2,
---     })
---
---     vim.cmd([[colorscheme everforest]])
---
---     local groups = {
---       "Normal", "NormalNC", "SignColumn", "EndOfBuffer",
---       "MsgArea", "NormalFloat", "FloatBorder"
---     }
---     for _, group in ipairs(groups) do
---       vim.api.nvim_set_hl(0, group, { bg = "none" })
---     end
---
---     vim.api.nvim_set_hl(0, "StatusLine", { bg = "#2f383e", fg = "#d3c6aa" })
---     vim.api.nvim_set_hl(0, "StatusLineNC", { bg = "#2f383e", fg = "#9da9a0" })
---   end,
--- }
 
 return {
+	
+{ "ellisonleao/gruvbox.nvim", priority = 1000 , config = true, opts = ...},
+{
   "neanias/everforest-nvim",
   version = false,
   lazy = false,
@@ -32,7 +10,7 @@ return {
   config = function()
     -- Everforest setup
     require("everforest").setup({
-      background = "hard",
+     background = "hard",
       transparent_background_level = 2,
     })
 
@@ -69,4 +47,5 @@ return {
     --   },
     -- })
   end,
+  },
 }

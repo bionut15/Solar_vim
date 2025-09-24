@@ -22,25 +22,20 @@ command("set number")
 -- Enable sane clipboard usage
 command("set clipboard+=unnamedplus")
 vim.opt.listchars = {
-	eol = " ",
+  tab = "¦ ",
+	eol = "↲",
 	space = " ",
-	trail = " ",
+	trail = "-",
 	extends = "▶",
 	precedes = "◀",
 }
 vim.opt.list = true
+vim.opt.mouse = "a" 
+vim.opt.termguicolors = true 
 
 -- Show matches when seacrhing
 command("set showmatch")
 command("set nohlsearch")
-
--- Make tabs visible
-vim.cmd([[	set list lcs=tab:\┃ 
-		set encoding=utf-8
-		set list
-		set cursorline
-		set cursorcolumn
-]])
 
 vim.cmd([[
 map <F5> :call CompileRunGcc()<CR>

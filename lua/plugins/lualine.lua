@@ -42,7 +42,7 @@ options = {
       return "[" .. str:sub(1, 3) .. "]"
     end,
     separator = {
-      left = ' ',
+      left = '',
       right = ' '
     }
   }
@@ -50,7 +50,7 @@ options = {
 
     lualine_b = { 'diff', 'diagnostics'},
     lualine_c = {'filename'},
-    lualine_x = {  'filetype'},
+    lualine_x = {'filetype'},
     lualine_y = {'progress'},
     lualine_z = {'location'}
   },
