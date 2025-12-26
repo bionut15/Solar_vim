@@ -17,6 +17,9 @@ return {
 		"typescript",
 		"typescriptreact",
 		"yaml",
+		"python",
+		"lua",
+		"rust"
 	},
 	},
 }

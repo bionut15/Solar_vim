@@ -1,7 +1,54 @@
-
 return {
 	
-{ "ellisonleao/gruvbox.nvim", priority = 1000 , config = true, opts = ...},
+{'shatur/neovim-ayu', priority = 1000 , config = function ()
+
+	require('ayu').setup({
+  terminal = true,
+    overrides = {
+ 
+        Normal = { bg = "None" },
+        BufferLineBackground= { bg = "None" },
+        TablineFill = { bg = "None" },
+        NormalFloat = { bg = "none" },
+        ColorColumn = { bg = "None" },
+        SignColumn = { bg = "None" },
+        Folded = { bg = "None" },
+        FoldColumn = { bg = "None" },
+        VertSplit = { bg = "None" },
+    },
+})
+	
+end},
+
+{ "ellisonleao/gruvbox.nvim", priority = 4000 , config = function ()
+
+    vim.cmd([[colorscheme gruvbox]])
+	 require("gruvbox").setup({
+
+  terminal_colors = true, -- add neovim terminal colors
+  undercurl = true,
+  underline = true,
+  bold = true,
+  italic = {
+    strings = true,
+    emphasis = true,
+    comments = true,
+    operators = false,
+    folds = true,
+  },
+  strikethrough = true,
+  invert_selection = false,
+  invert_signs = false,
+  invert_tabline = false,
+  inverse = true, -- invert background for search, diffs, statuslines and errors
+  contrast = "hard", -- can be "hard", "soft" or empty string
+  palette_overrides = {},
+  overrides = {},
+  dim_inactive = false,
+  transparent_mode = true,
+})
+end
+, opts = ...},
 {
   "neanias/everforest-nvim",
   version = false,
@@ -14,7 +61,6 @@ return {
       transparent_background_level = 2,
     })
 
-    vim.cmd([[colorscheme everforest]])
 
     -- Remove backgrounds for transparency
     local groups = {
@@ -25,27 +71,6 @@ return {
       vim.api.nvim_set_hl(0, group, { bg = "none" })
     end
 
-    -- Set a custom lualine background
-    -- local lualine_bg = "#1e2326" -- <- change this to your preferred background color
-    -- local lualine_fg = "#d3c6aa" -- Everforest's light text
-    --
-    -- require("lualine").setup({
-    --   options = {
-    --     theme = "everforest",
-    --     section_separators = "",
-    --     component_separators = "",
-    --     disabled_filetypes = {},
-    --     globalstatus = true,
-    --   },
-    --   sections = {
-    --     lualine_a = { { "mode", color = { bg = lualine_bg, fg = lualine_fg } } },
-    --     lualine_b = { { "branch", color = { bg = lualine_bg, fg = lualine_fg } } },
-    --     lualine_c = { { "filename", color = { bg = lualine_bg, fg = lualine_fg } } },
-    --     lualine_x = { { "encoding", color = { bg = lualine_bg, fg = lualine_fg } } },
-    --     lualine_y = { { "filetype", color = { bg = lualine_bg, fg = lualine_fg } } },
-    --     lualine_z = { { "location", color = { bg = lualine_bg, fg = lualine_fg } } },
-    --   },
-    -- })
   end,
   },
 }
